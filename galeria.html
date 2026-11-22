@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sk">
+<!-- podstranka galerie  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Best car ever made</title>
+    <meta name="descriptin" content="Galéria a využitie vozidla">
+    <meta property="og:image" content="     ">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--  pouzity font stiahnuty z googlu -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><h1>Galéria</h1></header>
+    <nav>
+        <ul>    <!--  navigacne tlacidla -->
+            <li><a href="index.html"> Domov </a></li>
+            <li><a href="kontakt.html"> Kontakt </a></li>
+            <li><a href="galeria.html" class="active"> Galéria </a></li>
+        </ul>   <!--  light mode a dark mode tlacidla -->
+        <div class="theme-switch">
+            <button id="light-mode" class="theme-button">🔆</button>
+            <button button id="dark-mode" class="theme-button">🌙</button>
+        </div>
+    </nav>
+    <main>
+        <section>   <!-- karty s obrazkami  -->
+            <div class="grid">
+                <figure class="gallery-card">
+                    <h4>Emisie ktoré prejdu STK na prvú dobrú</h4>
+                    <img src="Images/emisie.jpg" alt="Emisie">
+                </figure>
+                
+                <figure class="gallery-card">
+                    <h4>Motorový priestor idálny pre mačaciu spoločnosť</h4>
+                    <img src="Images/motor.jpg" alt="Motorový priestor s mačkou">
+                </figure>
+
+                <figure class="gallery-card">
+                    <h4>Ideálny partner na zimu</h4>
+                    <img src="Images/sneh2.jpg" alt="Auto na snehu s východom slnka">
+                </figure>
+
+                <figure class="gallery-card">
+                    <h4>Kvalitné zimné gumy sú základ</h4>
+                    <img src="Images/sneh.jpg" alt="Auto jemne od snehu na neodhrnutom parkovisku">
+                </figure>
+
+                <figure class="gallery-card">
+                    <h4>Ideálne vozidlo na rozbehnutie Vašej zahrádky</h4>
+                    <img src="Images/preprava.jpg" alt="Preprava rastlin bez problému">
+                </figure>
+
+                <figure class="gallery-card">
+                    <h4>Není problém ani s prípojným vozíkom</h4>
+                    <img src="Images/vozik.jpg" alt="Plne naložený vozík">
+                </figure>
+
+                <figure class="gallery-card">
+                    <h4>Auto výzorom neurazí na peknom mieste</h4>
+                    <img src="Images/coolshot2.jpg" alt="Fotka zozadu v pri lese">
+                </figure>
+
+                <figure class="gallery-card">
+                    <h4>Spoľahlivé vozidlo aj na brigádu</h4>
+                    <img src="Images/predok.jpg" alt="Predok auta na prázdnom parkovisku">
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>&copy; 2026 Zahatlan Dávid | VŠB-TUO | <a href="index.html">Vrátiť sa späť na hlavnú stránku</a></footer>
+    <!-- Priradenie lightboxu tejto konkretnej stranke a tlacidla zatvorenia  -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-button">&times;</span>
+        <img id="lightbox-img" src="" alt="Zväčšená fotka">
+    </div>
+
+    <script src="script.js"></script>   <!-- Priradenie js skriptu  -->
+</body>
+</html>

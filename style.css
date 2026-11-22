@@ -1,0 +1,449 @@
+*{box-sizing: border-box;}
+
+header
+{text-align: center;}
+
+nav
+{margin-bottom: 50px;} /*vonkajsi okraj */
+
+nav ul
+{
+    list-style: none; /* bez bodiek */
+    display: flex; /*flexbox, polozky vedla seba*/
+    justify-content: center; /*vycentrovanie*/
+    gap: 20px; /*medzera */
+    padding: 0; /*vnutorny okraj */
+}
+
+nav a /* nastavenie tlacidiel */
+{
+    color: white;
+    text-decoration: none; /*minus podciarknutie textu*/
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    transition: all 0.25s ease;
+}
+
+nav a.active /* farba aktivneho tlacidla */
+{
+    background-color: #eab308;
+    color: #081c15;
+    border-color: #eab308;
+}
+
+nav a:hover /* farba pozadia tlacidla pri presunuti mysky nan */
+{background-color: #f59e0b;}
+
+main
+{
+    max-width: 1200px;
+    margin: 0 auto; /* vycentruje blok na stred */
+    padding: 0 20px;
+}
+
+section
+{
+    background: rgba(0, 0, 0, 0.25); /* priehladnost pozadia 25% */
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.table-wrapper
+{
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table /* tabulky */
+{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th, td
+{
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+thead th
+{
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #eab308;
+    font-weight: 600;
+}
+
+tbody tr:hover /* Jemne rozjasni riadok tabulky na ktorom je myska */
+{background-color: rgba(255, 255, 255, 0.06);}
+
+body
+{
+    background: linear-gradient(to bottom, #132a13 0%,  #2d6a4f 100%); /* meniaca sa farba pozadia */
+    min-height: 100vh;
+    color: #f1f5f9;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.65;
+}
+
+footer
+{text-align: center;}
+
+h2
+{text-align: center;}
+
+h3
+{
+    text-align: center;
+    color: #f59e0b;
+}
+
+p
+{text-align: center;}
+/* nastavenie fotiek a kariet na hlavnej stranke */
+.history-images
+{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* fotky sa daju na novy riadok ked uz sa nezmestia vedla seba */
+}
+
+.history-card
+{
+    flex: 1 1 280px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.history-card h4
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #eab308;
+    font-size: 1rem;
+}
+
+.history-card img
+{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.single-photo /*nastavenie pre jednu fotku na riadok */
+{
+    width: fit-content;
+    max-width: 100%;
+    margin: 20px auto 0;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.single-photo img
+{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    border-radius: 8px;
+    display: block;
+}
+/* nastavenie kontatneho formulara */
+#kontakt-form
+{
+    max-width: 550px;
+    margin: 25px auto 0;
+    text-align: left;
+}
+
+.kontakt
+{margin-bottom: 18px;}
+
+.kontakt label
+{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #eab308;
+}
+
+.kontakt input,
+.kontakt textarea
+{
+    width: 100%;
+    padding: 12px 14px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    color: #f1f5f9;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease; /* zobrazi sa border pomaly */
+}
+
+.kontakt input:focus,
+.kontakt textarea:focus
+{
+    outline: none;
+    border-color: #eab308;
+    box-shadow: 0 0 8px rgba(234, 179, 8, 0.3);
+}
+
+.form-status
+{
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+    min-height: 24px;
+}
+/* nastavenie farieb pre light a dark mode*/
+.form-status.error
+{color: #f87171;}
+
+.form-status.success
+{color: #eab308;}
+
+body.light-mode .form-status.error
+{color: #dc2626;}
+
+body.light-mode .form-status.success
+{color: #1b4332;}
+
+.button /* tlacidla na light mode dark mode */
+{
+    width: 100%;
+    padding: 13px;
+    background-color: #eab308;
+    color: #081c15;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.button:hover /* jemne nadvihne tlacidlo pri prejdeni myskou a zmeni mu farbu */
+{
+    background-color: #facc15;
+    transform: translateY(-2px);
+}
+
+.theme-switch
+{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px auto;
+}
+
+.theme-button
+{
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.theme-button:hover
+{background-color: rgba(234, 179, 8, 0.3);}
+
+.theme-button.active
+{
+    background-color: #eab308;
+    border-color: #eab308;
+    transform: scale(1.08); /* jemne zvacsi tlacidlo zvolenej temy */
+}
+/* nastavenia pri light mode*/
+body.light-mode .theme-button
+{
+    background-color: rgba(255, 255, 255, 0.65);
+    border-color: rgba(8, 28, 21, 0.15);
+}
+
+body.light-mode .theme-button.active
+{
+    background-color: #2d6a4f;
+    border-color: #2d6a4f;
+}
+
+body.light-mode {
+    background: linear-gradient(to bottom, #d8f3dc 0%, #74c69d 100%);
+    color: #081c15;
+}
+/* Svetle karty namiesto tmavych pri light mode */
+body.light-mode section,
+body.light-mode .history-card,
+body.light-mode .single-photo,
+body.light-mode .gallery-card {
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 4px 15px rgba(8, 28, 21, 0.08);
+}
+/* nadpisy a popisky formulara pri light mode */
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode .kontakt label
+{color: #1b4332;}
+
+body.light-mode nav a
+{
+    background-color: rgba(255, 255, 255, 0.65);
+    color: #081c15;
+    border-color: rgba(8, 28, 21, 0.15);
+}
+
+body.light-mode nav a.active
+{
+    background-color: #2d6a4f;
+    color: #ffffff;
+    border-color: #2d6a4f;
+}
+
+body.light-mode nav a:hover
+{
+    background-color: #40916c;
+    color: #ffffff;
+}
+
+body.light-mode thead th
+{
+    background-color: rgba(45, 106, 79, 0.18);
+    color: #1b4332;
+}
+
+body.light-mode th,
+body.light-mode td
+{
+    border-bottom: 1px solid rgba(8, 28, 21, 0.15);
+}
+
+body.light-mode tbody tr:hover
+{
+    background-color: rgba(45, 106, 79, 0.08);
+}
+
+body.light-mode .kontakt input,
+body.light-mode .kontakt textarea
+{
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #081c15;
+    border-color: rgba(8, 28, 21, 0.25);
+}
+
+body.light-mode .button
+{
+    background-color: #2d6a4f;
+    color: #ffffff;
+}
+
+body.light-mode .button:hover
+{background-color: #40916c;}
+
+.grid /* grid pre foyky v galerii */
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* idealne 2 inak 1 ak neni miesto */
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.gallery-card
+{
+    background: rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    margin: 0;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.25s ease;
+}
+
+.gallery-card:hover
+{transform: translateY(-4px);}
+
+.gallery-card h4
+{
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #eab308;
+    font-size: 1rem;
+}
+
+.gallery-card img
+{
+    cursor: pointer;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+@media (max-width: 768px) /* pravidla pre zmensenie rozlozenia stranky pri mensich obrazkovkach a toto teda pri rozliseni mensom ako 768px*/
+{
+    .grid
+    {grid-template-columns: 1fr;}
+
+    .gallery-card img
+    {height: 300px;}
+}
+/* nastavenia lightboxu pri zvacseni fotiek kliknutim */
+.lightbox
+{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.lightbox.active
+{display: flex;}
+
+.lightbox img
+{
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+    border: 2px solid #eab308;
+}
+/* zatvaracie tladitkooooo */
+.close-button
+{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #f1f5f9;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 2px 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.close-button:hover
+{
+    background-color: #eab308;
+    color: #081c15;
+}

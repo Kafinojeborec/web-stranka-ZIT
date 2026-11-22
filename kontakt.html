@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sk">
+<!-- Kontakt stranka s formularom  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Best car ever made</title>
+    <meta name="descriptin" content="Napíš mi tvoje kontaktné údaje a môžme sa o aute porozprávať :]">
+    <meta property="og:image" content="     ">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Font stranky stiahnuty z googlu  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><h1>Kontakt</h1></header>
+    <nav>
+        <ul>    <!--  Tlacidla navigacie -->
+            <li><a href="index.html"> Domov </a></li>
+            <li><a href="kontakt.html" class="active"> Kontakt </a></li>
+            <li><a href="galeria.html"> Galéria </a></li>
+        </ul>
+        <div class="theme-switch">  <!-- tlacidla light mode a dark mode  -->
+            <button id="light-mode" class="theme-button">🔆</button>
+            <button button id="dark-mode" class="theme-button">🌙</button>
+        </div>
+    </nav>
+    <main>
+        <section>   <!-- formular  -->
+            <h3>Napíš mi tvoje kontaktné údaje a môžme sa o aute porozprávať :]</h3>
+            <form id="kontakt-form" novalidate>
+                <div class="kontakt">
+                    <label for="meno">Meno alebo prezývka:</label>
+                    <input type="text" name="meno" id="meno" placeholder="John Pork">
+                </div>
+                <div class="kontakt">
+                    <label for="email">Emailová adresa:</label>
+                    <input type="email" name="email" id="email" placeholder="johnpork@gmail.com">
+                </div>
+                <div class="kontakt">
+                    <label for="telefon">Telefónne číslo:</label>
+                    <input type="tel" name="telefon" id="telefon" placeholder="+421 670 067 607">
+                </div>
+                <div class="kontakt">
+                    <label for="sprava">Téma ktorá ťa zaujíma</label>
+                    <textarea name="sprava" rows="5" id="sprava" placeholder="Chcem sa pobaviť o..."></textarea>
+                </div>
+                
+                <button type="submit" class="button">Odoslať</button>
+                <p id="form-status" class="form-status"></p>
+            </form>
+        </section>
+    </main>
+    <footer>&copy; 2026 Zahatlan Dávid | VŠB-TUO | <a href="index.html">Vrátiť sa späť na hlavnú stránku</a></footer>
+
+    <script src="script.js"></script>   <!-- priradenie js skriptu  -->
+</body>
+</html>
